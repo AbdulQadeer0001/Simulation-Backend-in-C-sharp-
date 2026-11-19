@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <RootNamespace>QueueLab.Api</RootNamespace>
+    <AssemblyName>QueueLab.Api</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QueueLab.Core\QueueLab.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- The observed NADRA workbook is copied next to the executable. -->
+    <Content Include="data\**\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

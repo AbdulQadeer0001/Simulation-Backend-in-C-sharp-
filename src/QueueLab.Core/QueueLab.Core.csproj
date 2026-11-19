@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>QueueLab.Core</RootNamespace>
+    <AssemblyName>QueueLab.Core</AssemblyName>
+    <Description>QueueLab queueing-simulation engine (C# port of the Python/Flask backend).</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Student-t quantiles for confidence intervals (replaces scipy.stats.t) -->
+    <PackageReference Include="MathNet.Numerics" Version="5.*" />
+    <!-- Writing .xlsx exports (replaces openpyxl) -->
+    <PackageReference Include="ClosedXML" Version="0.104.*" />
+    <!-- Reading .xlsx / .xls uploads (replaces pandas.read_excel / xlrd) -->
+    <PackageReference Include="ExcelDataReader" Version="3.*" />
+  </ItemGroup>
+
+</Project>

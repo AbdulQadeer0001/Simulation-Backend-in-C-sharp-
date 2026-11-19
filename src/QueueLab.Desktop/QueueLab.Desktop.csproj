@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QueueLab.Desktop</RootNamespace>
+    <AssemblyName>QueueLab.Desktop</AssemblyName>
+    <ApplicationDisplayVersion>0.1.0</ApplicationDisplayVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.*" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.*" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QueueLab.Core\QueueLab.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- The observed NADRA workbook is shared with the API project and copied next to the executable. -->
+    <Content Include="..\QueueLab.Api\data\observed\nadra_day1_first100.xlsx" Link="data\observed\nadra_day1_first100.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
